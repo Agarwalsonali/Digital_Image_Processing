@@ -20,7 +20,7 @@ lines = cv2.HoughLinesP(edges,
 
 if lines is not None:
     for line in lines:
-        x1, y1, x2, y2 = line[0]
+        x1, y1, x2, y2 = line
         cv2.line(img, (x1, y1), (x2, y2), (0, 255, 0), 3)
 else:
     print("No lines were detected!")
