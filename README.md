@@ -28,7 +28,7 @@ The scripts open image or plot windows when executed. Press `Ctrl+C` or close th
 
 ## Examples
 
-| Script | Description | Input image |
+| Script | Description | Input |
 |---|---|---|
 | `1_threshold.py` | Applies thresholding to a grayscale image | `1_threashold.png` |
 | `2_clipping.py` | Clips pixel intensity values to a selected range | `2_clipping.png` |
@@ -41,8 +41,12 @@ The scripts open image or plot windows when executed. Press `Ctrl+C` or close th
 | `9_black_and_white.py` | Converts an image to a binary black-and-white result | `9_black_and_white.jpg` |
 | `10_assignment.py` | Identifies connected components and joins nearby components | `10_assignment.png` |
 | `11_sharpning_filter.py` | Applies a spatial sharpening filter | `11_sharpning_filter.jpg` |
-| `12_angle.py` | Computes Sobel gradient angles for a small sample matrix | `12_angle.py` |
+| `12_angle.py` | Computes Sobel gradient angles for a small sample matrix | Built-in sample matrix |
 | `13_Hough_Tranform.py` | Detects line segments using the probabilistic Hough transform | `13_Hough_Transform.png` |
+| `19-letter.py` | Connects nearby strokes and groups letters using connected components | Generated sample image |
+| `20-overlap.py` | Draws two shapes and shades their overlapping region | Generated shapes |
+| `21-separate.py` | Uses Otsu thresholding to separate a foreground and blur the background | `image.jpg` |
+| `22-separate2.py` | Uses GrabCut to estimate the foreground and blur the background | `input.jpg` |
 
 ## Image Steganography
 
@@ -64,6 +68,6 @@ The steganography scripts use the least significant bit of each grayscale pixel.
 
 ## Project Files
 
-- Python examples are in the project root.
+- Python examples are in the project root. Run them from that directory so their relative image paths resolve.
 - `Originals/` contains source images used for selected operations.
-- Output images and screenshots are stored in the project root alongside their corresponding scripts.
+- Most examples display their results in a window; the steganography encoder writes `secret.png` to the project root.
